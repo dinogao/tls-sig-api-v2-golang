@@ -1,7 +1,7 @@
-## 说明
-此项目为 tls-sig-api-v2 （对称密钥版本）golang 实现版本，请注意，之前版本的非对称密钥无法使用此版 api，如需使用请查看[这里](https://github.com/tencentyun/tls-sig-api-golang)。
+## Note
+This project is the go implementation of tls-sig-api-v2. Previous asymmetric keys cannot use APIs of this version. To enable them to use APIs of this version,[see here](https://github.com/tencentyun/tls-sig-api-golang).
 
-## 使用
+## use
 ``` go
 import (
 	"github.com/tencentyun/tls-sig-api-v2-golang/tencentyun"
@@ -14,7 +14,7 @@ const (
 )
 
 func main()  {
-	sig, err := tencentyun.GenUserSig(sdkappid, key, "xiaojun", 86400*180)
+	sig, err := tencentyun.GenSig(sdkappid, key, "xiaojun", 86400*180)
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
