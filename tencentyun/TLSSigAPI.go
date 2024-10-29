@@ -14,7 +14,7 @@ import (
 )
 
 /**
- * Function: Used to issue UserSig that is required by the TRTC and IM services.
+ * Function: Used to issue UserSig that is required by the TRTC and CHAT services.
  *
  * Parameter description:
  * sdkappid - Application ID
