@@ -1,10 +1,10 @@
 ## Note
-This project is the go implementation of tls-sig-api-v2. Previous asymmetric keys cannot use APIs of this version. To enable them to use APIs of this version,[see here](https://github.com/tencentyun/tls-sig-api-golang).
+This project is the go implementation of tls-sig-api-v2. Previous asymmetric keys cannot use APIs of this version. To enable them to use APIs of this version,[see here](https://github.com/tencentcloud/tls-sig-api-golang).
 
 ## use
 ``` go
 import (
-	"github.com/tencentyun/tls-sig-api-v2-golang/tencentyun"
+	"github.com/tencentcloud/tls-sig-api-v2-golang/tencentcloud"
 	"fmt"
 )
 
@@ -14,7 +14,7 @@ const (
 )
 
 func main()  {
-	sig, err := tencentyun.GenSig(sdkappid, key, "xiaojun", 86400*180)
+	sig, err := tencentcloud.GenSig(sdkappid, key, "xiaojun", 86400*180)
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {

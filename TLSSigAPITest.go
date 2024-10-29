@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/tencentyun/tls-sig-api-v2-golang/tencentyun"
+	"github.com/tencentcloud/tls-sig-api-v2-golang/tencentcloud"
 )
 
 const (
@@ -11,25 +11,25 @@ const (
 )
 
 func main() {
-	sig, err := tencentyun.GenUserSig(sdkappid, key, "xiaojun", 86400*180)
+	sig, err := tencentcloud.GenUserSig(sdkappid, key, "xiaojun", 86400*180)
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
 		fmt.Println(sig)
 	}
-	sig, err = tencentyun.GenPrivateMapKey(sdkappid, key, "xiaojun", 86400*180, 10000, 255)
+	sig, err = tencentcloud.GenPrivateMapKey(sdkappid, key, "xiaojun", 86400*180, 10000, 255)
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
 		fmt.Println(sig)
 	}
-	sig, err = tencentyun.GenPrivateMapKeyWithStringRoomID(sdkappid, key, "xiaojun", 86400*180, "1000000040", 255)
+	sig, err = tencentcloud.GenPrivateMapKeyWithStringRoomID(sdkappid, key, "xiaojun", 86400*180, "1000000040", 255)
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {
 		fmt.Println(sig)
 	}
-	sig, err = tencentyun.GenUserSigWithBuf(sdkappid, key, "xiaojun", 86400*180, []byte("abc"))
+	sig, err = tencentcloud.GenUserSigWithBuf(sdkappid, key, "xiaojun", 86400*180, []byte("abc"))
 	if err != nil {
 		fmt.Println(err.Error())
 	} else {

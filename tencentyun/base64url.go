@@ -1,4 +1,4 @@
-package tencentyun
+package tencentcloud
 
 import (
 	"encoding/base64"
